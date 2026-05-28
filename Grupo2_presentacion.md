@@ -90,6 +90,7 @@ style: |
 ---
 
 <!-- _class: portada -->
+<!-- footer: "🎤 Expone: Integrante 1  |  Grupo 2 — Hash Tables" -->
 
 # TABLAS DE DISPERSIÓN
 ## Hash Tables — Direccionamiento Abierto y Aplicaciones
@@ -105,6 +106,7 @@ Universidad Continental | Ingeniería de Sistemas e Informática | 2026
 ---
 
 # ¿Qué aprendió el Grupo 1?
+###### 🎤 Integrante 1
 
 **Resumen rápido (2 min):**
 - Hash table = arreglo + función hash → O(1)
@@ -120,6 +122,7 @@ Universidad Continental | Ingeniería de Sistemas e Informática | 2026
 ---
 
 # Open Addressing — La Idea
+###### 🎤 Integrante 1
 
 **Sin listas enlazadas.** Todo dentro del arreglo.
 
@@ -138,6 +141,7 @@ Cuando hay colisión → busco el **siguiente bucket disponible** (sondeo).
 ---
 
 # Sondeo Lineal
+###### 🎤 Integrante 1
 
 ```
 h(k, i) = (h'(k) + i) mod m,   con i = 0, 1, 2, ...
@@ -156,7 +160,10 @@ Si el bucket está ocupado → prueba el siguiente consecutivo.
 
 ---
 
+<!-- footer: "🎤 Expone: Integrante 2  |  Grupo 2 — Hash Tables" -->
+
 # Sondeo Cuadrático y Doble Hashing
+###### 🎤 Integrante 2
 
 **Sondeo Cuadrático:**
 ```
@@ -175,6 +182,7 @@ El paso depende de la clave → distribución casi perfecta.
 ---
 
 # Lazy Deletion — Eliminación Inteligente
+###### 🎤 Integrante 2
 
 **El problema:** si borramos un elemento, dejamos un hueco que interrumpe búsquedas.
 
@@ -194,7 +202,10 @@ enum Estado { VACIO, OCUPADO, ELIMINADO };
 
 ---
 
+<!-- footer: "🎤 Expone: Integrante 3  |  Grupo 2 — Hash Tables" -->
+
 # Estructura en C++ (sin STL)
+###### 🎤 Integrante 3
 
 ```cpp
 enum Estado { VACIO, OCUPADO, ELIMINADO };
@@ -222,6 +233,7 @@ struct TablaHash {
 ---
 
 # Demo — Inserción con Doble Hashing
+###### 🎤 Integrante 3
 
 ![h:500](https://raw.githubusercontent.com/74048030-dotcom/Grupo2_Semana11_HashTables/main/capturas/01_insertar_doble_hashing.png)
 
@@ -230,6 +242,7 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 ---
 
 # Comparativa — Mismo dato, dos métodos
+###### 🎤 Integrante 3
 
 | Clave    | Sondeo Lineal | Doble Hashing |
 |----------|---------------|---------------|
@@ -247,12 +260,14 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 ---
 
 # Evidencia — Comparativa en consola
+###### 🎤 Integrante 3
 
 ![h:550](https://raw.githubusercontent.com/74048030-dotcom/Grupo2_Semana11_HashTables/main/capturas/02_comparativa_lineal_vs_doble.png)
 
 ---
 
 # Demo — Lazy Deletion en vivo
+###### 🎤 Integrante 3
 
 ![h:550](https://raw.githubusercontent.com/74048030-dotcom/Grupo2_Semana11_HashTables/main/capturas/03_lazy_deletion.png)
 
@@ -261,6 +276,7 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 ---
 
 # Complejidad — Open Addressing
+###### 🎤 Integrante 3
 
 | Operación | Promedio (α < 1) | Peor caso |
 |-----------|------------------|-----------|
@@ -277,6 +293,7 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 ---
 
 # Chaining vs Open Addressing
+###### 🎤 Integrante 3
 
 | Aspecto | Chaining | Open Addressing |
 |---------|----------|-----------------|
@@ -290,7 +307,10 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 
 ---
 
+<!-- footer: "🎤 Expone: Frank Abel Chambi Condori  |  Grupo 2 — Hash Tables" -->
+
 # Aplicación — Contador de Palabras
+###### 🎤 Frank Abel Chambi Condori
 
 ![h:380](https://raw.githubusercontent.com/74048030-dotcom/Grupo2_Semana11_HashTables/main/capturas/04_contador_palabras.png)
 
@@ -299,6 +319,7 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 ---
 
 # ¿Qué usa la industria?
+###### 🎤 Frank Abel Chambi Condori
 
 | Sistema | Técnica | Por qué |
 |---------|---------|---------|
@@ -312,6 +333,7 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 ---
 
 # Vibe Coding — Lo que usamos
+###### 🎤 Frank Abel Chambi Condori
 
 **Herramienta:** Claude (Anthropic)
 
@@ -328,6 +350,7 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 ---
 
 # Conclusiones
+###### 🎤 Frank Abel Chambi Condori
 
 **Hash Tables en una frase:**
 > Arreglo + función hash + manejo de colisiones = O(1) para todo.
@@ -344,6 +367,7 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 ---
 
 # Gracias
+###### 🎤 Frank Abel Chambi Condori
 
 *¿Preguntas?*
 
