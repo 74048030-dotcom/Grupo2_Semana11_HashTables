@@ -1,0 +1,124 @@
+Seleccione metodo de sondeo:
+  1 = Lineal,  2 = Cuadratico,  3 = Doble Hashing
+Opcion: 
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: Codigo: Nombre:   >> Insertado en 1 paso(s).
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: Codigo: Nombre:   >> Insertado en 1 paso(s).
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: Codigo: Nombre:   >> Insertado en 1 paso(s).
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: Codigo: Nombre:   >> Insertado en 4 paso(s).
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: 
++-----+----------+----------------------+-----------+
+| Pos | Clave    | Valor                | Estado    |
++-----+----------+----------------------+-----------+
+|  0  |          |                      | VACIO     |
+|  1  | INF101   | Algoritmica I        | OCUPADO   |
+|  2  | INF102   | Algoritmica II       | OCUPADO   |
+|  3  | INF103   | Estr. Datos          | OCUPADO   |
+|  4  | MAT201   | Calculo I            | OCUPADO   |
+|  5  |          |                      | VACIO     |
+|  6  |          |                      | VACIO     |
+|  7  |          |                      | VACIO     |
+|  8  |          |                      | VACIO     |
+|  9  |          |                      | VACIO     |
+| 10  |          |                      | VACIO     |
++-----+----------+----------------------+-----------+
+ Elementos: 4  |  Factor de carga: 0.363636
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: Codigo a eliminar:   >> Eliminada (marcada como ELIMINADO).
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: 
++-----+----------+----------------------+-----------+
+| Pos | Clave    | Valor                | Estado    |
++-----+----------+----------------------+-----------+
+|  0  |          |                      | VACIO     |
+|  1  | INF101   | Algoritmica I        | OCUPADO   |
+|  2  | ----     |                      | ELIMINADO |
+|  3  | INF103   | Estr. Datos          | OCUPADO   |
+|  4  | MAT201   | Calculo I            | OCUPADO   |
+|  5  |          |                      | VACIO     |
+|  6  |          |                      | VACIO     |
+|  7  |          |                      | VACIO     |
+|  8  |          |                      | VACIO     |
+|  9  |          |                      | VACIO     |
+| 10  |          |                      | VACIO     |
++-----+----------+----------------------+-----------+
+ Elementos: 3  |  Factor de carga: 0.272727
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: Codigo a buscar:   >> Encontrada: Estr. Datos (1 pasos)
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: 

@@ -659,6 +659,8 @@ Opcion: 4
  Elementos: 2  |  Factor de carga: 0.18
 ```
 
+![Captura 1 — Inserción con doble hashing](capturas/01_insertar_doble_hashing.png)
+
 ### 5.2 Comparativa Lineal vs Doble Hashing
 
 ```
@@ -681,6 +683,8 @@ Opcion: 4
 
 > Con los mismos datos, doble hashing realizó **47 % menos pasos** que sondeo lineal (salida real del programa compilado).
 
+![Captura 2 — Comparativa lineal vs doble hashing](capturas/02_comparativa_lineal_vs_doble.png)
+
 ### 5.3 Eliminación con Lazy Deletion
 
 ```
@@ -694,6 +698,8 @@ Codigo a buscar: INF103
 ```
 
 > Aunque `INF102` fue eliminada, la búsqueda de `INF103` **sigue funcionando** porque la cubeta se marcó como `ELIMINADO` (no `VACIO`).
+
+![Captura 3 — Eliminación con Lazy Deletion](capturas/03_lazy_deletion.png)
 
 ### 5.4 Aplicación — Contador de palabras
 
@@ -709,6 +715,8 @@ el amor es amor y el amor no miente nunca
   2. "el"     -> 2 veces
   3. "es"     -> 1 veces
 ```
+
+![Captura 4 — Contador de frecuencia de palabras](capturas/04_contador_palabras.png)
 
 ---
 

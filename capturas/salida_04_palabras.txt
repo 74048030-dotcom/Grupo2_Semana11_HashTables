@@ -1,0 +1,9 @@
+===== CONTADOR DE PALABRAS (Hash Table) =====
+Ingrese un texto (terminar con ENTER):
+
+>> Total de palabras procesadas: 10
+
+=== TOP 3 palabras mas frecuentes ===
+  1. "amor"  -> 3 veces
+  2. "el"  -> 2 veces
+  3. "es"  -> 1 veces

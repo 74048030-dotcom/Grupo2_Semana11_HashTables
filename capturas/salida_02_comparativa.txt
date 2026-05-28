@@ -1,0 +1,37 @@
+Seleccione metodo de sondeo:
+  1 = Lineal,  2 = Cuadratico,  3 = Doble Hashing
+Opcion: 
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: 
+========================================
+ COMPARATIVA: Lineal vs Doble Hashing
+========================================
+
+| Clave    | Lineal | Doble Hash |
+|----------|--------|------------|
+| INF101   |   1    |     1      |
+| INF102   |   1    |     1      |
+| INF103   |   1    |     1      |
+| MAT201   |   4    |     2      |
+| MAT202   |   4    |     2      |
+| FIS301   |   6    |     2      |
+|----------|--------|------------|
+| TOTAL    |   17    |     9     |
+| Promedio | 2.83333  | 1.5    |
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+[2] Buscar materia
+[3] Eliminar materia
+[4] Mostrar tabla completa
+[5] Ejecutar comparativa Lineal vs Doble Hashing
+[6] Cambiar metodo de sondeo
+[0] Salir
+Opcion: 
