@@ -96,7 +96,9 @@ style: |
 
 ### Estructura de Datos — Semana 11
 
-**Grupo 2** — Integrante 1, Integrante 2, Integrante 3, Integrante 4
+**Grupo 2**
+
+Integrante 1 · Integrante 2 · Integrante 3 · **Frank Abel Chambi Condori**
 
 Universidad Continental | Ingeniería de Sistemas e Informática | 2026
 
@@ -347,7 +349,7 @@ Insertamos INF101, INF102, INF103 → todos en 1 paso.
 
 ---
 
-**Grupo 2** — Integrantes: [nombres]
+**Grupo 2** — Integrante 1 · Integrante 2 · Integrante 3 · **Frank Abel Chambi Condori**
 
 **Código disponible en:** `Grupo2_Semana11_HashTables/codigo/`
 

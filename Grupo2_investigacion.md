@@ -13,10 +13,10 @@
 **Sección:** Viernes
 **Grupo:** 2
 **Integrantes:**
-- Integrante 1 — [Apellidos, Nombres]
-- Integrante 2 — [Apellidos, Nombres]
-- Integrante 3 — [Apellidos, Nombres]
-- Integrante 4 — [Apellidos, Nombres]
+- Integrante 1 — [Apellidos, Nombres]   <!-- editar -->
+- Integrante 2 — [Apellidos, Nombres]   <!-- editar -->
+- Integrante 3 — [Apellidos, Nombres]   <!-- editar -->
+- Integrante 4 — Chambi Condori, Frank Abel
 
 **Temas cubiertos:**
 - Colisiones: Direccionamiento Abierto (Open Addressing)
@@ -831,6 +831,17 @@ El código revisado e integrado se encuentra en `codigo/programa_principal.cpp` 
 5. **cppreference.com.** *std::unordered_map — C++ Standard Library.* https://en.cppreference.com/w/cpp/container/unordered_map
 
 6. **Karpathy, A. (2 de febrero de 2025).** *"There's a new kind of coding I call vibe coding..."* [Post en X/Twitter]. https://x.com/karpathy/status/1886192184808149383
+
+---
+
+## 10. REPARTO DE EXPOSICIÓN (15–20 min)
+
+| # | Integrante | Diapositivas | Tema | Tiempo | Dificultad |
+|---|-----------|--------------|------|--------|------------|
+| 1 | [Apellidos, Nombres] | 1 → 4 | Portada · Recap Grupo 1 · Open Addressing concepto · Sondeo Lineal | 4–5 min | Media |
+| 2 | [Apellidos, Nombres] | 5 → 6 | Sondeo Cuadrático · Doble Hashing · Lazy Deletion (teoría) | 4 min | Media-alta (fórmulas) |
+| 3 | [Apellidos, Nombres] | 7 → 13 | Estructura C++ · 3 demos en consola · Comparativa · Complejidad · Chaining vs Open | 5–6 min | **Alta (explica código)** |
+| 4 | **Chambi Condori, Frank Abel** | **14 → 19** | **Aplicación contador palabras · Aplicaciones en industria (Python, Java, Redis, DNS, Git) · Vibe Coding · Conclusiones · Cierre** | **4 min** | **Baja (puro concepto, sin código)** |
 
 ---
 
