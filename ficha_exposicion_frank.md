@@ -1,5 +1,8 @@
 # 🎤 FICHA DE EXPOSICIÓN — FRANK ABEL CHAMBI CONDORI
-**Grupo 2 · Hash Tables · Diapositivas 14-19 · ~4 minutos · Integrante 4**
+**Grupo 2 · Hash Tables · Integrante 4 (PARTE 4) · ~4 minutos**
+
+📄 **Documento:** secciones §9 a §14 (busca "PARTE 4" en `Grupo2_investigacion.md`)
+🎯 **Presentación:** diapositivas 14 → 19 (busca tu nombre en el footer)
 
 ---
 
@@ -10,6 +13,7 @@
 ---
 
 ## 📊 DIAPOSITIVA 14 — Aplicación: Contador de Palabras (~50 seg)
+**Documento: §9**
 
 - Programa que recibe un texto y cuenta palabras.
 - Ejemplo: *"el amor es amor y el amor no miente nunca"*
@@ -20,6 +24,7 @@
 ---
 
 ## 🌐 DIAPOSITIVA 15 — ¿Qué usa la industria? (~1 min)
+**Documento: §10**
 
 - **Python dict** → hash table.
 - **Java HashMap** → hash table.
@@ -32,6 +37,7 @@
 ---
 
 ## 🤖 DIAPOSITIVA 16 — Vibe Coding (~50 seg)
+**Documento: §13**
 
 - Usamos **Claude (Anthropic)** para programar.
 - 3 errores que tuvimos que corregir nosotros:
@@ -44,6 +50,7 @@
 ---
 
 ## ✅ DIAPOSITIVA 17 — Conclusiones (~50 seg)
+**Documento: §14**
 
 - Hash table = arreglo + función hash + colisiones = **O(1)**.
 - Tamaño **primo**, factor de carga **< 0.7**.
@@ -82,13 +89,24 @@
 
 ## 🎯 CHECKLIST 5 MIN ANTES
 
-- [ ] PDF abierto y proyectado.
+- [ ] PDF abierto y proyectado en pantalla.
 - [ ] Mi parte empieza en diapositiva **14** (Contador de Palabras).
 - [ ] Mi parte termina en diapositiva **19** (créditos).
+- [ ] En el footer de mi bloque debe aparecer mi nombre.
 - [ ] Recuerdo frase de inicio.
 - [ ] Recuerdo frase de cierre.
 - [ ] Tengo agua a la mano.
 - [ ] Celular en silencio.
+
+---
+
+## 📍 ¿DÓNDE BUSCO EN EL DOCUMENTO?
+
+En `Grupo2_investigacion.md`, presiona **Ctrl+F** y busca:
+- **"PARTE 4"** → te lleva al inicio de tu bloque (§9).
+- **"Chambi Condori"** → te lleva al marcador con tu nombre.
+
+Tu bloque incluye todas las secciones consecutivas: **§9, §10, §11, §12, §13, §14**.
 
 ---
 
