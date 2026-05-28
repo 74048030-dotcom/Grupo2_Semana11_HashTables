@@ -2,6 +2,8 @@
 ## Tablas de Dispersión (Hash Tables)
 ### Subtemas del Grupo 2: Direccionamiento Abierto + Implementación Completa y Aplicaciones
 
+> **Estructura del documento:** se mantienen TODOS los contenidos pedidos por el docente (introducción, subtemas, código C++, ejemplos, complejidad, vibe coding, conclusiones, referencias). Solo se reordenan los bloques para que cada integrante encuentre su parte de forma CONSECUTIVA, sin intercalado.
+
 ---
 
 ## 1. PORTADA
@@ -28,10 +30,9 @@
 
 ---
 
----
-
-# 🎤 EXPONE: INTEGRANTE 1
+# 🎤 PARTE 1 — EXPONE: INTEGRANTE 1
 ### [Apellidos, Nombres]
+**Diapositivas 1 → 4 · ~4-5 minutos**
 
 ---
 
@@ -63,11 +64,9 @@ El Grupo 1 ya introdujo los fundamentos (función hash, factor de carga) y la t�
 
 ---
 
-## 3. DESARROLLO DE LOS SUBTEMAS
+## 3. DIRECCIONAMIENTO ABIERTO — Concepto y Sondeo Lineal
 
-### 3.1 SUBTEMA A — Direccionamiento Abierto (Open Addressing)
-
-#### 3.1.1 Concepto
+### 3.1 Concepto
 
 A diferencia del **chaining**, donde cada bucket es la cabeza de una lista enlazada, en el **direccionamiento abierto** **todos los elementos se guardan dentro del arreglo**. No hay listas enlazadas, no hay punteros adicionales.
 
@@ -76,7 +75,7 @@ Cuando una clave colisiona (es decir, su índice hash ya está ocupado), no se c
 **Requisito fundamental:** el factor de carga α debe ser **siempre menor que 1**.
 Si α ≥ 1, no hay espacio físico para más elementos en el arreglo. Por buenas prácticas, se mantiene α ≤ 0.7 para no degradar el rendimiento.
 
-#### 3.1.2 Sondeo Lineal (Linear Probing)
+### 3.2 Sondeo Lineal (Linear Probing)
 
 **Fórmula:**
 
@@ -101,12 +100,15 @@ A medida que se insertan elementos, se forman **bloques contiguos de cubetas ocu
 
 ---
 
-# 🎤 EXPONE: INTEGRANTE 2
+# 🎤 PARTE 2 — EXPONE: INTEGRANTE 2
 ### [Apellidos, Nombres]
+**Diapositivas 5 → 6 · ~4 minutos**
 
 ---
 
-#### 3.1.3 Sondeo Cuadrático (Quadratic Probing)
+## 4. SONDEOS AVANZADOS Y LAZY DELETION
+
+### 4.1 Sondeo Cuadrático (Quadratic Probing)
 
 **Fórmula:**
 
@@ -122,7 +124,7 @@ En su forma más común con c1=0 y c2=1: el paso aumenta cuadráticamente (+1, +
 
 **Restricción adicional:** para garantizar que todas las cubetas sean alcanzables, se recomienda que **m sea un número primo** y que la tabla no se llene más allá de α ≤ 0.5.
 
-#### 3.1.4 Doble Hashing (Double Hashing)
+### 4.2 Doble Hashing (Double Hashing)
 
 **Fórmula:**
 
@@ -142,7 +144,7 @@ h2(k) = 1 + (hashCode(k) mod (m - 1))
 
 **Ventaja:** como el salto depende de la clave misma, dos claves diferentes con el mismo h1 generan secuencias completamente distintas. **Prácticamente elimina el clustering** y es la técnica más robusta entre las tres.
 
-#### 3.1.5 Eliminación con Marcadores (Lazy Deletion)
+### 4.3 Eliminación con Marcadores (Lazy Deletion)
 
 **El problema:**
 Si simplemente "vaciamos" una cubeta tras eliminar un elemento, dejamos un **hueco** en el medio de la secuencia de sondeo. Las búsquedas posteriores se detendrán en ese hueco creyendo que la clave no existe, **aunque sí esté presente más adelante en la secuencia**.
@@ -171,16 +173,13 @@ Esta técnica es **obligatoria** en open addressing. Sin ella, la operación de 
 
 ---
 
----
-
-# 🎤 EXPONE: INTEGRANTE 3
+# 🎤 PARTE 3 — EXPONE: INTEGRANTE 3
 ### [Apellidos, Nombres]
+**Diapositivas 7 → 13 · ~5-6 minutos**
 
 ---
 
-### 3.2 SUBTEMA B — Implementación Completa y Aplicaciones
-
-#### 3.2.1 Análisis comparativo: Chaining vs Open Addressing
+## 5. CHAINING vs OPEN ADDRESSING — Comparativa
 
 | Aspecto | Chaining | Open Addressing |
 |---------|----------|-----------------|
@@ -197,64 +196,10 @@ Esta técnica es **obligatoria** en open addressing. Sin ella, la operación de 
 
 ---
 
-# 🎤 EXPONE: INTEGRANTE 4
-### Chambi Condori, Frank Abel
-
----
-
-#### 3.2.2 Aplicación implementada — Contador de frecuencia de palabras
-
-> El grupo seleccionó la **Opción B** del enunciado: Contador de frecuencia de palabras.
-
-**Descripción:**
-Dado un texto cualquiera ingresado por el usuario, el programa:
-
-1. Separa el texto en palabras (tokenización por espacios y signos de puntuación).
-2. Normaliza las palabras a minúsculas.
-3. Usa la tabla hash (clave = palabra, valor = contador) para registrar cuántas veces aparece cada una.
-4. Muestra el **top 3** de palabras más frecuentes.
-
-**¿Por qué es un caso perfecto para hash tables?**
-- La clave es un `string` de longitud variable.
-- Las operaciones dominantes son `buscar` (¿ya vi esta palabra?) y `actualizar` (incrementar contador).
-- Sin hash table, contar palabras en un texto de 10 000 palabras tomaría O(n²) en el peor caso (n búsquedas × n comparaciones). Con hash table, es O(n) en promedio.
-
-**Casos de uso en la industria:**
-- Análisis de sentimientos en redes sociales.
-- Detección de spam por frecuencia de palabras clave.
-- Motores de búsqueda (indexación inversa).
-- Análisis lingüístico de corpus.
-
-#### 3.2.3 Aplicaciones reales en la industria
-
-| Sistema | Uso de hash tables |
-|---------|--------------------|
-| **DNS** | Mapea nombre de dominio → dirección IP en O(1) |
-| **Compiladores** | Tabla de símbolos: variables, funciones, tipos |
-| **Bases de datos** | Índices hash (MySQL Memory engine, PostgreSQL hash index) |
-| **Caché (Redis, Memcached)** | Almacenamiento clave-valor en RAM |
-| **Git** | Identifica commits, blobs y trees por su SHA-1 |
-| **Criptografía** | Distinto contexto: SHA-256, MD5 (funciones hash criptográficas; **no** son tablas hash, solo comparten la idea de "hashear") |
-
----
-
----
-
-# 🎤 EXPONE: INTEGRANTE 3
-### [Apellidos, Nombres]
-
----
-
-## 4. IMPLEMENTACIÓN EN C++
+## 6. IMPLEMENTACIÓN EN C++ — Programa Principal (Open Addressing)
 
 > **Restricción:** Sin uso de STL (`map`, `unordered_map`). Todo implementado desde cero.
-> Dos programas principales:
-> 1. `programa_principal.cpp` — Tabla hash con direccionamiento abierto (3 sondeos + Lazy Deletion).
-> 2. `programa_aplicacion.cpp` — Contador de frecuencia de palabras.
-
-### 4.1 Programa principal — Open Addressing (los 3 sondeos)
-
-> Archivo: `codigo/programa_principal.cpp`
+> Archivo: `codigo/programa_principal.cpp` — Tabla hash con direccionamiento abierto (3 sondeos + Lazy Deletion).
 
 ```cpp
 // =============================================================
@@ -516,7 +461,166 @@ int main() {
 }
 ```
 
-### 4.2 Programa de aplicación — Contador de palabras
+---
+
+## 7. EJEMPLOS DE EJECUCIÓN — Open Addressing
+
+### 7.1 Inserción con doble hashing
+
+```
+Seleccione metodo de sondeo:
+  1 = Lineal,  2 = Cuadratico,  3 = Doble Hashing
+Opcion: 3
+
+===== AGENDA DE MATERIAS (Open Addressing) =====
+[1] Insertar materia
+Opcion: 1
+Codigo: INF101
+Nombre: Algoritmica I
+  >> Insertado en 1 paso(s).
+
+Opcion: 1
+Codigo: INF102
+Nombre: Algoritmica II
+  >> Insertado en 1 paso(s).
+
+Opcion: 4
+
++-----+----------+----------------------+-----------+
+| Pos | Clave    | Valor                | Estado    |
++-----+----------+----------------------+-----------+
+|  0  |          |                      | VACIO     |
+|  1  |          |                      | VACIO     |
+|  2  | INF102   | Algoritmica II       | OCUPADO   |
+|  3  |          |                      | VACIO     |
+|  4  | INF101   | Algoritmica I        | OCUPADO   |
+|  5  |          |                      | VACIO     |
+...
+ Elementos: 2  |  Factor de carga: 0.18
+```
+
+![Captura 1 — Inserción con doble hashing](capturas/01_insertar_doble_hashing.png)
+
+### 7.2 Comparativa Lineal vs Doble Hashing
+
+```
+========================================
+ COMPARATIVA: Lineal vs Doble Hashing
+========================================
+
+| Clave    | Lineal | Doble Hash |
+|----------|--------|------------|
+| INF101   |   1    |     1      |
+| INF102   |   1    |     1      |
+| INF103   |   1    |     1      |
+| MAT201   |   4    |     2      |
+| MAT202   |   4    |     2      |
+| FIS301   |   6    |     2      |
+|----------|--------|------------|
+| TOTAL    |   17   |     9      |
+| Promedio | 2.83   | 1.50       |
+```
+
+> Con los mismos datos, doble hashing realizó **47 % menos pasos** que sondeo lineal (salida real del programa compilado).
+
+![Captura 2 — Comparativa lineal vs doble hashing](capturas/02_comparativa_lineal_vs_doble.png)
+
+### 7.3 Eliminación con Lazy Deletion
+
+```
+Opcion: 3
+Codigo a eliminar: INF102
+  >> Eliminada (marcada como ELIMINADO).
+
+Opcion: 2
+Codigo a buscar: INF103
+  >> Encontrada: Estr. Datos (3 pasos)
+```
+
+> Aunque `INF102` fue eliminada, la búsqueda de `INF103` **sigue funcionando** porque la cubeta se marcó como `ELIMINADO` (no `VACIO`).
+
+![Captura 3 — Eliminación con Lazy Deletion](capturas/03_lazy_deletion.png)
+
+---
+
+## 8. ANÁLISIS DE COMPLEJIDAD ALGORÍTMICA
+
+### 8.1 Direccionamiento Abierto — Caso promedio
+
+Asumiendo hashing uniforme y α = n/m < 1:
+
+| Operación | Promedio | Peor caso |
+|-----------|----------|-----------|
+| **Inserción** | O(1 / (1 − α)) | O(n) |
+| **Búsqueda exitosa** | O((1/α) · ln(1/(1 − α))) | O(n) |
+| **Búsqueda fallida** | O(1 / (1 − α)) | O(n) |
+| **Eliminación (lazy)** | O(1 / (1 − α)) | O(n) |
+
+> **Interpretación práctica:** con α = 0.5, el promedio es ≈ 2 pasos por operación. Con α = 0.9, sube a ≈ 10 pasos. **Por eso es crítico mantener α ≤ 0.7.**
+
+### 8.2 Comparación con otras estructuras
+
+| Estructura | Búsqueda | Inserción | Eliminación |
+|-----------|----------|-----------|-------------|
+| Array no ordenado | O(n) | O(1) | O(n) |
+| Array ordenado | O(log n) | O(n) | O(n) |
+| Lista enlazada | O(n) | O(1) | O(n) |
+| BST balanceado | O(log n) | O(log n) | O(log n) |
+| **Hash Open Addr** | **O(1) prom** | **O(1) prom** | **O(1) prom** |
+
+### 8.3 Impacto del clustering
+
+- **Sondeo lineal:** muy sensible al clustering primario. Con α = 0.8, el tiempo promedio puede triplicarse respecto a la fórmula teórica si la función hash es mediocre.
+- **Sondeo cuadrático:** elimina clustering primario, pero claves con el mismo h1 generan idéntica secuencia (clustering secundario).
+- **Doble hashing:** prácticamente sin clustering. Es la opción más robusta.
+
+---
+
+# 🎤 PARTE 4 — EXPONE: INTEGRANTE 4
+### Chambi Condori, Frank Abel
+**Diapositivas 14 → 19 · ~4 minutos**
+
+---
+
+## 9. APLICACIÓN IMPLEMENTADA — Contador de Frecuencia de Palabras
+
+> El grupo seleccionó la **Opción B** del enunciado: Contador de frecuencia de palabras.
+
+**Descripción:**
+Dado un texto cualquiera ingresado por el usuario, el programa:
+
+1. Separa el texto en palabras (tokenización por espacios y signos de puntuación).
+2. Normaliza las palabras a minúsculas.
+3. Usa la tabla hash (clave = palabra, valor = contador) para registrar cuántas veces aparece cada una.
+4. Muestra el **top 3** de palabras más frecuentes.
+
+**¿Por qué es un caso perfecto para hash tables?**
+- La clave es un `string` de longitud variable.
+- Las operaciones dominantes son `buscar` (¿ya vi esta palabra?) y `actualizar` (incrementar contador).
+- Sin hash table, contar palabras en un texto de 10 000 palabras tomaría O(n²) en el peor caso (n búsquedas × n comparaciones). Con hash table, es O(n) en promedio.
+
+**Casos de uso en la industria:**
+- Análisis de sentimientos en redes sociales.
+- Detección de spam por frecuencia de palabras clave.
+- Motores de búsqueda (indexación inversa).
+- Análisis lingüístico de corpus.
+
+---
+
+## 10. APLICACIONES REALES EN LA INDUSTRIA
+
+| Sistema | Uso de hash tables |
+|---------|--------------------|
+| **DNS** | Mapea nombre de dominio → dirección IP en O(1) |
+| **Compiladores** | Tabla de símbolos: variables, funciones, tipos |
+| **Bases de datos** | Índices hash (MySQL Memory engine, PostgreSQL hash index) |
+| **Caché (Redis, Memcached)** | Almacenamiento clave-valor en RAM |
+| **Git** | Identifica commits, blobs y trees por su SHA-1 |
+| **Criptografía** | Distinto contexto: SHA-256, MD5 (funciones hash criptográficas; **no** son tablas hash, solo comparten la idea de "hashear") |
+
+---
+
+## 11. IMPLEMENTACIÓN EN C++ — Programa de Aplicación (Contador de Palabras)
 
 > Archivo: `codigo/programa_aplicacion.cpp`
 
@@ -658,92 +762,7 @@ int main() {
 
 ---
 
-## 5. EJEMPLOS DE EJECUCIÓN
-
-### 5.1 Programa principal — Inserción con doble hashing
-
-```
-Seleccione metodo de sondeo:
-  1 = Lineal,  2 = Cuadratico,  3 = Doble Hashing
-Opcion: 3
-
-===== AGENDA DE MATERIAS (Open Addressing) =====
-[1] Insertar materia
-Opcion: 1
-Codigo: INF101
-Nombre: Algoritmica I
-  >> Insertado en 1 paso(s).
-
-Opcion: 1
-Codigo: INF102
-Nombre: Algoritmica II
-  >> Insertado en 1 paso(s).
-
-Opcion: 4
-
-+-----+----------+----------------------+-----------+
-| Pos | Clave    | Valor                | Estado    |
-+-----+----------+----------------------+-----------+
-|  0  |          |                      | VACIO     |
-|  1  |          |                      | VACIO     |
-|  2  | INF102   | Algoritmica II       | OCUPADO   |
-|  3  |          |                      | VACIO     |
-|  4  | INF101   | Algoritmica I        | OCUPADO   |
-|  5  |          |                      | VACIO     |
-...
- Elementos: 2  |  Factor de carga: 0.18
-```
-
-![Captura 1 — Inserción con doble hashing](capturas/01_insertar_doble_hashing.png)
-
-### 5.2 Comparativa Lineal vs Doble Hashing
-
-```
-========================================
- COMPARATIVA: Lineal vs Doble Hashing
-========================================
-
-| Clave    | Lineal | Doble Hash |
-|----------|--------|------------|
-| INF101   |   1    |     1      |
-| INF102   |   1    |     1      |
-| INF103   |   1    |     1      |
-| MAT201   |   4    |     2      |
-| MAT202   |   4    |     2      |
-| FIS301   |   6    |     2      |
-|----------|--------|------------|
-| TOTAL    |   17   |     9      |
-| Promedio | 2.83   | 1.50       |
-```
-
-> Con los mismos datos, doble hashing realizó **47 % menos pasos** que sondeo lineal (salida real del programa compilado).
-
-![Captura 2 — Comparativa lineal vs doble hashing](capturas/02_comparativa_lineal_vs_doble.png)
-
-### 5.3 Eliminación con Lazy Deletion
-
-```
-Opcion: 3
-Codigo a eliminar: INF102
-  >> Eliminada (marcada como ELIMINADO).
-
-Opcion: 2
-Codigo a buscar: INF103
-  >> Encontrada: Estr. Datos (3 pasos)
-```
-
-> Aunque `INF102` fue eliminada, la búsqueda de `INF103` **sigue funcionando** porque la cubeta se marcó como `ELIMINADO` (no `VACIO`).
-
-![Captura 3 — Eliminación con Lazy Deletion](capturas/03_lazy_deletion.png)
-
----
-
-# 🎤 EXPONE: INTEGRANTE 4
-### Chambi Condori, Frank Abel
-
----
-
-### 5.4 Aplicación — Contador de palabras
+## 12. EJEMPLO DE EJECUCIÓN — Contador de Palabras
 
 ```
 ===== CONTADOR DE PALABRAS (Hash Table) =====
@@ -762,54 +781,7 @@ el amor es amor y el amor no miente nunca
 
 ---
 
----
-
-# 🎤 EXPONE: INTEGRANTE 3
-### [Apellidos, Nombres]
-
----
-
-## 6. ANÁLISIS DE COMPLEJIDAD ALGORÍTMICA
-
-### 6.1 Direccionamiento Abierto — Caso promedio
-
-Asumiendo hashing uniforme y α = n/m < 1:
-
-| Operación | Promedio | Peor caso |
-|-----------|----------|-----------|
-| **Inserción** | O(1 / (1 − α)) | O(n) |
-| **Búsqueda exitosa** | O((1/α) · ln(1/(1 − α))) | O(n) |
-| **Búsqueda fallida** | O(1 / (1 − α)) | O(n) |
-| **Eliminación (lazy)** | O(1 / (1 − α)) | O(n) |
-
-> **Interpretación práctica:** con α = 0.5, el promedio es ≈ 2 pasos por operación. Con α = 0.9, sube a ≈ 10 pasos. **Por eso es crítico mantener α ≤ 0.7.**
-
-### 6.2 Comparación con otras estructuras
-
-| Estructura | Búsqueda | Inserción | Eliminación |
-|-----------|----------|-----------|-------------|
-| Array no ordenado | O(n) | O(1) | O(n) |
-| Array ordenado | O(log n) | O(n) | O(n) |
-| Lista enlazada | O(n) | O(1) | O(n) |
-| BST balanceado | O(log n) | O(log n) | O(log n) |
-| **Hash Open Addr** | **O(1) prom** | **O(1) prom** | **O(1) prom** |
-
-### 6.3 Impacto del clustering
-
-- **Sondeo lineal:** muy sensible al clustering primario. Con α = 0.8, el tiempo promedio puede triplicarse respecto a la fórmula teórica si la función hash es mediocre.
-- **Sondeo cuadrático:** elimina clustering primario, pero claves con el mismo h1 generan idéntica secuencia (clustering secundario).
-- **Doble hashing:** prácticamente sin clustering. Es la opción más robusta.
-
----
-
----
-
-# 🎤 EXPONE: INTEGRANTE 4
-### Chambi Condori, Frank Abel
-
----
-
-## 7. SECCIÓN DE VIBE CODING
+## 13. SECCIÓN DE VIBE CODING
 
 ### Herramienta(s) utilizada(s)
 
@@ -848,7 +820,7 @@ La IA generó un esqueleto correcto: definió el `enum Estado`, una `struct Entr
 
 ### Código final
 
-El código revisado e integrado se encuentra en `codigo/programa_principal.cpp` (mostrado en la sección 4.1).
+El código revisado e integrado se encuentra en `codigo/programa_principal.cpp` y `codigo/programa_aplicacion.cpp`.
 
 ### Reflexión del grupo
 
@@ -858,7 +830,7 @@ El código revisado e integrado se encuentra en `codigo/programa_principal.cpp` 
 
 ---
 
-## 8. CONCLUSIONES DEL GRUPO
+## 14. CONCLUSIONES DEL GRUPO
 
 1. El **Direccionamiento Abierto** es una alternativa al chaining que **ahorra memoria** al guardar todo en el arreglo, pero requiere mantener α < 1 e implementar **eliminación con marcadores** (lazy deletion) para no corromper la estructura.
 
@@ -874,7 +846,7 @@ El código revisado e integrado se encuentra en `codigo/programa_principal.cpp` 
 
 ---
 
-## 9. REFERENCIAS BIBLIOGRÁFICAS
+## 15. REFERENCIAS BIBLIOGRÁFICAS
 
 1. **Cormen, T. H., Leiserson, C. E., Rivest, R. L. y Stein, C. (2022).** *Introduction to Algorithms* (4ª ed.). MIT Press. **Capítulo 11: Hash Tables.** ISBN 9780262046305. Disponible en: https://mitpressbookstore.mit.edu/book/9780262046305
 
@@ -890,27 +862,14 @@ El código revisado e integrado se encuentra en `codigo/programa_principal.cpp` 
 
 ---
 
-## 10. REPARTO DE EXPOSICIÓN (15–20 min)
+## 16. REPARTO DE EXPOSICIÓN (15–20 min)
 
-> **Nota:** la estructura del documento sigue el modelo del docente (numeración fija). Por eso las secciones de algunos integrantes están **intercaladas** en el documento, pero cada integrante encuentra su parte buscando el marcador grande "🎤 EXPONE: INTEGRANTE N".
-
-### Resumen de reparto
-
-| # | Integrante | Diapositivas | Tiempo | Dificultad |
-|---|-----------|--------------|--------|------------|
-| 1 | [Apellidos, Nombres] | 1 → 4 | 4–5 min | Media |
-| 2 | [Apellidos, Nombres] | 5 → 6 | 4 min | Media-alta (fórmulas) |
-| 3 | [Apellidos, Nombres] | 7 → 13 | 5–6 min | **Alta (explica código)** |
-| 4 | **Chambi Condori, Frank Abel** | **14 → 19** | **4 min** | **Baja (puro concepto)** |
-
-### Secciones del documento por integrante
-
-| Integrante | Secciones exactas del documento que expone |
-|-----------|-----------------------------------|
-| **Integrante 1** | §2 (Introducción) · §3.1.1 (Concepto Open Addressing) · §3.1.2 (Sondeo Lineal) |
-| **Integrante 2** | §3.1.3 (Sondeo Cuadrático) · §3.1.4 (Doble Hashing) · §3.1.5 (Lazy Deletion) |
-| **Integrante 3** | §3.2.1 (Chaining vs Open) · §4 (Implementación C++) · §5.1, §5.2, §5.3 (Ejemplos Open Addr) · §6 (Complejidad) |
-| **Integrante 4 (Frank)** | §3.2.2 (Aplicación contador) · §3.2.3 (Industria) · §5.4 (Ejemplo contador) · §7 (Vibe Coding) · §8 (Conclusiones) |
+| # | Integrante | Secciones del documento | Diapositivas | Tiempo | Dificultad |
+|---|-----------|-------------------------|--------------|--------|------------|
+| 1 | [Apellidos, Nombres] | §2 + §3 | 1 → 4 | 4–5 min | Media |
+| 2 | [Apellidos, Nombres] | §4 | 5 → 6 | 4 min | Media-alta |
+| 3 | [Apellidos, Nombres] | §5 + §6 + §7 + §8 | 7 → 13 | 5–6 min | **Alta (código)** |
+| 4 | **Chambi Condori, Frank Abel** | **§9 + §10 + §11 + §12 + §13 + §14** | **14 → 19** | **4 min** | **Baja (sin código)** |
 
 ---
 
