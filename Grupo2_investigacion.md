@@ -28,6 +28,13 @@
 
 ---
 
+---
+
+# 🎤 EXPONE: INTEGRANTE 1
+### [Apellidos, Nombres]
+
+---
+
 ## 2. INTRODUCCIÓN GENERAL
 
 Una **Tabla de Dispersión** (Hash Table) es una estructura de datos que almacena pares **clave → valor** y permite realizar las operaciones de **inserción, búsqueda y eliminación en tiempo promedio O(1)**. Esto la convierte en una de las estructuras más eficientes y utilizadas en la industria del software.
@@ -91,6 +98,13 @@ Inserto "Pedro" → h' = 3 → tabla[3] ocupado  → prueba [4] → OK
 A medida que se insertan elementos, se forman **bloques contiguos de cubetas ocupadas**. Estos bloques tienden a crecer (las nuevas inserciones caen sobre ellos y los alargan), degradando el rendimiento. Cualquier clave que caiga en mitad del bloque deberá recorrer todo el bloque hasta encontrar un hueco.
 
 > Analogía: imagina una autopista de un solo carril. Cuando un auto frena, todos los que llegan se apilan detrás. Mientras más larga la fila, peor para el siguiente.
+
+---
+
+# 🎤 EXPONE: INTEGRANTE 2
+### [Apellidos, Nombres]
+
+---
 
 #### 3.1.3 Sondeo Cuadrático (Quadratic Probing)
 
@@ -157,6 +171,13 @@ Esta técnica es **obligatoria** en open addressing. Sin ella, la operación de 
 
 ---
 
+---
+
+# 🎤 EXPONE: INTEGRANTE 3
+### [Apellidos, Nombres]
+
+---
+
 ### 3.2 SUBTEMA B — Implementación Completa y Aplicaciones
 
 #### 3.2.1 Análisis comparativo: Chaining vs Open Addressing
@@ -173,6 +194,13 @@ Esta técnica es **obligatoria** en open addressing. Sin ella, la operación de 
 **¿Cuándo elegir cada uno?**
 - **Chaining:** cuando la cantidad de elementos es muy dinámica o desconocida.
 - **Open Addressing:** cuando el rendimiento por caché es crítico (sistemas embebidos, alta concurrencia, motores de juegos).
+
+---
+
+# 🎤 EXPONE: INTEGRANTE 4
+### Chambi Condori, Frank Abel
+
+---
 
 #### 3.2.2 Aplicación implementada — Contador de frecuencia de palabras
 
@@ -207,6 +235,13 @@ Dado un texto cualquiera ingresado por el usuario, el programa:
 | **Caché (Redis, Memcached)** | Almacenamiento clave-valor en RAM |
 | **Git** | Identifica commits, blobs y trees por su SHA-1 |
 | **Criptografía** | Distinto contexto: SHA-256, MD5 (funciones hash criptográficas; **no** son tablas hash, solo comparten la idea de "hashear") |
+
+---
+
+---
+
+# 🎤 EXPONE: INTEGRANTE 3
+### [Apellidos, Nombres]
 
 ---
 
@@ -701,6 +736,13 @@ Codigo a buscar: INF103
 
 ![Captura 3 — Eliminación con Lazy Deletion](capturas/03_lazy_deletion.png)
 
+---
+
+# 🎤 EXPONE: INTEGRANTE 4
+### Chambi Condori, Frank Abel
+
+---
+
 ### 5.4 Aplicación — Contador de palabras
 
 ```
@@ -717,6 +759,13 @@ el amor es amor y el amor no miente nunca
 ```
 
 ![Captura 4 — Contador de frecuencia de palabras](capturas/04_contador_palabras.png)
+
+---
+
+---
+
+# 🎤 EXPONE: INTEGRANTE 3
+### [Apellidos, Nombres]
 
 ---
 
@@ -750,6 +799,13 @@ Asumiendo hashing uniforme y α = n/m < 1:
 - **Sondeo lineal:** muy sensible al clustering primario. Con α = 0.8, el tiempo promedio puede triplicarse respecto a la fórmula teórica si la función hash es mediocre.
 - **Sondeo cuadrático:** elimina clustering primario, pero claves con el mismo h1 generan idéntica secuencia (clustering secundario).
 - **Doble hashing:** prácticamente sin clustering. Es la opción más robusta.
+
+---
+
+---
+
+# 🎤 EXPONE: INTEGRANTE 4
+### Chambi Condori, Frank Abel
 
 ---
 
