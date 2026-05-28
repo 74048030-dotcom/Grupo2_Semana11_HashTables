@@ -892,12 +892,25 @@ El código revisado e integrado se encuentra en `codigo/programa_principal.cpp` 
 
 ## 10. REPARTO DE EXPOSICIÓN (15–20 min)
 
-| # | Integrante | Diapositivas | Tema | Tiempo | Dificultad |
-|---|-----------|--------------|------|--------|------------|
-| 1 | [Apellidos, Nombres] | 1 → 4 | Portada · Recap Grupo 1 · Open Addressing concepto · Sondeo Lineal | 4–5 min | Media |
-| 2 | [Apellidos, Nombres] | 5 → 6 | Sondeo Cuadrático · Doble Hashing · Lazy Deletion (teoría) | 4 min | Media-alta (fórmulas) |
-| 3 | [Apellidos, Nombres] | 7 → 13 | Estructura C++ · 3 demos en consola · Comparativa · Complejidad · Chaining vs Open | 5–6 min | **Alta (explica código)** |
-| 4 | **Chambi Condori, Frank Abel** | **14 → 19** | **Aplicación contador palabras · Aplicaciones en industria (Python, Java, Redis, DNS, Git) · Vibe Coding · Conclusiones · Cierre** | **4 min** | **Baja (puro concepto, sin código)** |
+> **Nota:** la estructura del documento sigue el modelo del docente (numeración fija). Por eso las secciones de algunos integrantes están **intercaladas** en el documento, pero cada integrante encuentra su parte buscando el marcador grande "🎤 EXPONE: INTEGRANTE N".
+
+### Resumen de reparto
+
+| # | Integrante | Diapositivas | Tiempo | Dificultad |
+|---|-----------|--------------|--------|------------|
+| 1 | [Apellidos, Nombres] | 1 → 4 | 4–5 min | Media |
+| 2 | [Apellidos, Nombres] | 5 → 6 | 4 min | Media-alta (fórmulas) |
+| 3 | [Apellidos, Nombres] | 7 → 13 | 5–6 min | **Alta (explica código)** |
+| 4 | **Chambi Condori, Frank Abel** | **14 → 19** | **4 min** | **Baja (puro concepto)** |
+
+### Secciones del documento por integrante
+
+| Integrante | Secciones exactas del documento que expone |
+|-----------|-----------------------------------|
+| **Integrante 1** | §2 (Introducción) · §3.1.1 (Concepto Open Addressing) · §3.1.2 (Sondeo Lineal) |
+| **Integrante 2** | §3.1.3 (Sondeo Cuadrático) · §3.1.4 (Doble Hashing) · §3.1.5 (Lazy Deletion) |
+| **Integrante 3** | §3.2.1 (Chaining vs Open) · §4 (Implementación C++) · §5.1, §5.2, §5.3 (Ejemplos Open Addr) · §6 (Complejidad) |
+| **Integrante 4 (Frank)** | §3.2.2 (Aplicación contador) · §3.2.3 (Industria) · §5.4 (Ejemplo contador) · §7 (Vibe Coding) · §8 (Conclusiones) |
 
 ---
 
