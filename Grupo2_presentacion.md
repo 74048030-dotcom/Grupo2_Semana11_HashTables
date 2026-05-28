@@ -219,24 +219,11 @@ struct TablaHash {
 
 ---
 
-# Demo en Vivo — Materias Universitarias
+# Demo — Inserción con Doble Hashing
 
-*[Aquí el grupo muestra el programa corriendo en consola]*
+![h:500](https://raw.githubusercontent.com/74048030-dotcom/Grupo2_Semana11_HashTables/main/capturas/01_insertar_doble_hashing.png)
 
-Insertar: INF101, INF102, INF103, MAT201, MAT202, FIS301
-
-```
-+-----+----------+------------------+-----------+
-| Pos | Clave    | Valor            | Estado    |
-+-----+----------+------------------+-----------+
-|  2  | INF102   | Algoritmica II   | OCUPADO   |
-|  4  | INF101   | Algoritmica I    | OCUPADO   |
-|  7  | INF103   | Estr. Datos      | OCUPADO   |
-+-----+----------+------------------+-----------+
- Factor de carga: 0.55
-```
-
-> ¿Qué pasa si elimino INF102 y luego busco INF103?
+Insertamos INF101, INF102, INF103 → todos en 1 paso.
 
 ---
 
@@ -254,6 +241,20 @@ Insertar: INF101, INF102, INF103, MAT201, MAT202, FIS301
 | **Promedio** | **2.83**  | **1.50**      |
 
 > Doble hashing: **47 % menos pasos** que sondeo lineal.
+
+---
+
+# Evidencia — Comparativa en consola
+
+![h:550](https://raw.githubusercontent.com/74048030-dotcom/Grupo2_Semana11_HashTables/main/capturas/02_comparativa_lineal_vs_doble.png)
+
+---
+
+# Demo — Lazy Deletion en vivo
+
+![h:550](https://raw.githubusercontent.com/74048030-dotcom/Grupo2_Semana11_HashTables/main/capturas/03_lazy_deletion.png)
+
+> Eliminamos INF102 → INF103 sigue encontrándose porque la búsqueda **cruza** la cubeta marcada como `ELIMINADO`.
 
 ---
 
@@ -289,23 +290,9 @@ Insertar: INF101, INF102, INF103, MAT201, MAT202, FIS301
 
 # Aplicación — Contador de Palabras
 
-*[Demo con un texto real]*
+![h:380](https://raw.githubusercontent.com/74048030-dotcom/Grupo2_Semana11_HashTables/main/capturas/04_contador_palabras.png)
 
-```
-Ingrese texto: "el amor es amor y el amor no miente nunca"
-
->> Total de palabras procesadas: 10
-
-=== TOP 3 palabras más frecuentes ===
-  1. "amor"  -> 3 veces
-  2. "el"    -> 2 veces
-  3. "es"    -> 1 vez
-```
-
-**¿Dónde se usa esto?**
-- Análisis de mensajes / sentimientos
-- Indexación en motores de búsqueda
-- Detección de spam
+**¿Dónde se usa esto?** Análisis de sentimientos · Motores de búsqueda · Detección de spam
 
 ---
 
