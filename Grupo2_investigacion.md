@@ -15,9 +15,9 @@
 **Sección:** Viernes
 **Grupo:** 2
 **Integrantes:**
-- Integrante 1 — [Apellidos, Nombres]   <!-- editar -->
-- Integrante 2 — [Apellidos, Nombres]   <!-- editar -->
-- Integrante 3 — [Apellidos, Nombres]   <!-- editar -->
+- Integrante 1 — Brian Jean Carlo Sucasaire Colque   
+- Integrante 2 — Vicente Machaca Kandy Jennifer   
+- Integrante 3 — [Apellidos, Nombres]   
 - Integrante 4 — Chambi Condori, Frank Abel
 
 **Temas cubiertos:**
@@ -31,7 +31,7 @@
 ---
 
 # 🎤 PARTE 1 — EXPONE: INTEGRANTE 1
-### [Apellidos, Nombres]
+### Brian Jean Carlo Sucasaire Colque 
 **Diapositivas 1 → 4 · ~4-5 minutos**
 
 ---
@@ -101,7 +101,7 @@ A medida que se insertan elementos, se forman **bloques contiguos de cubetas ocu
 ---
 
 # 🎤 PARTE 2 — EXPONE: INTEGRANTE 2
-### [Apellidos, Nombres]
+### Vicente Machaca Kandy Jennifer
 **Diapositivas 5 → 6 · ~4 minutos**
 
 ---
